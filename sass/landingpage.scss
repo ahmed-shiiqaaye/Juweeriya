@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@400;500;600&family=PT+Sans:ital@1&family=Poppins:wght@400;500&family=Rubik:wght@300;400;500;700;900&family=Ubuntu:ital,wght@0,400;0,700;1,500&display=swap');
+$primary:#131b26;
+$accent:#15A192;
+
+$lg: 992px;
+$md:768px;
+.btn-success{
+    background: $accent;
+}
+.btn-outline{
+    border: 1px solid $accent;
+    margin-right: 10px;
+}
+body{
+    font-family: rubik;
+    background: $primary;
+    color: white;
+}
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+ul{
+    list-style-type: none;
+}
+a{
+    color: white;
+}
+img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.navbar{
+    .container{
+        .navbar-brand{
+            height: 100px;
+            width: 130px;
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .collapse{
+           ul{
+            margin-right: 70px;
+            li a{
+                color: rgba(255, 255, 255, 0.6);
+                position: relative;
+                padding: 4px 0;
+                margin: 10px;
+                &.active{
+                    color: $accent;
+                    &::after{
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 30px;
+                        height: 2px;
+                        background: $accent;
+                    }
+                }
+            }
+           }
+           form{
+            .btn{
+                color: rgba(255, 255, 255, 0.8);
+            }
+            .btn-success{
+                color: white;
+            }
+            .btn-outline{
+                @media (max-width:$lg) {
+                 margin-bottom: 10px;
+                }
+            }
+            @media (max-width:$lg) {
+             flex-direction: column;
+            }
+           }
+           @media (max-width:$lg) {
+            flex-direction: column;
+           }
+        }
+    }
+}
+
+.showcase{
+    height: 80vh;
+    .container{
+        .row{
+            .col{
+                h1{
+                    text-transform: capitalize;
+                    font-size: 60px;
+                    opacity: .95;
+                    margin-bottom: 20px;
+                }
+                p{
+                    opacity: .75;
+                    margin-bottom: 30px;
+                }
+                select{
+                    padding: 14px 22px;
+                    outline: none;
+                    border: 0;
+                    font-size: 16px;
+                    border-radius: 4px;
+                }
+            }
+        }
+    }
+}
