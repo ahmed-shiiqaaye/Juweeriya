@@ -52,6 +52,9 @@ img{
                 position: relative;
                 padding: 4px 0;
                 margin: 10px;
+                &:hover{
+                    color: $accent;
+                }
                 &.active{
                     color: $accent;
                     &::after{
@@ -111,6 +114,84 @@ img{
                     font-size: 16px;
                     border-radius: 4px;
                 }
+            }
+            @media (max-width:$md) {
+                .image-side{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.featured{
+    .container{
+        .row .col{
+            height: 100px;
+            img{
+                width: 140px;
+                height: 80px;
+                object-fit: cover;
+                filter: grayscale(100%);
+                opacity: .4;
+            }
+        }
+    }
+}
+
+.why{
+    .container{
+        .row .col-md-4{
+            padding:10px;
+            .icon-div{
+                background: rgba(21, 161, 147, 0.153);
+                width: 80px;
+                height: 80px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin-left: 50%;
+                transform: translateX(-50%);
+                border-radius: 50%;
+                font-size:25px;
+                color: $accent;
+            }
+            p{
+                opacity: .7;
+            }
+            h4{
+                opacity: .9;
+            }
+        }
+    }
+}
+
+.testimonials{
+    background: rgba(255, 255, 255, 0.008);
+    .container{
+        max-width: 992px;
+        .user{
+            i.fa-quote-left{
+                color: $accent;
+                font-size: 24px;
+            }
+            p.my-4{
+                opacity: .8;
+            }
+            .person{
+                h5{
+                    font-size: 19px;
+                    margin-bottom: 0;
+                }
+                .job{
+                    font-size: 15px;
+                    opacity: .5;
+                    margin: 0;
+                }
+            }
+            i.left{
+                opacity: .5;
+                font-size: 20px;
             }
         }
     }
